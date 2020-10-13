@@ -1,0 +1,62 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 62ef06d4fa364e8fbf1db72fd617cd2585f033b9345a0e442cfb3828724da131
+
+name:           projects-hs
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/ssipos90/projects-hs#readme>
+homepage:       https://github.com/ssipos90/projects-hs#readme
+bug-reports:    https://github.com/ssipos90/projects-hs/issues
+author:         Sebastian Sipos
+maintainer:     sebastiansipos90@gmail.com
+copyright:      MIT
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/ssipos90/projects-hs
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_projects_hs
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable projects-hs-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_projects_hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , projects-hs
+  default-language: Haskell2010
+
+test-suite projects-hs-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_projects_hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , projects-hs
+  default-language: Haskell2010
