@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 62ef06d4fa364e8fbf1db72fd617cd2585f033b9345a0e442cfb3828724da131
+-- hash: 7f40b3717fb1b9448ed3feadc7141bd46a238d65df16d5496700d28762008c0c
 
 name:           projects-hs
 version:        0.1.0.0
@@ -32,8 +32,20 @@ library
       Paths_projects_hs
   hs-source-dirs:
       src
+  default-extensions: NoImplicitPrelude OverloadedStrings
   build-depends:
-      base >=4.7 && <5
+      aeson >=1.4.6 && <1.4.7
+    , base >=4.7 && <5
+    , bytestring >=0.10.8.2 && <0.11
+    , hedis >=0.12 && <0.13
+    , http-types >=0.12.3 && <0.13
+    , microlens >=0.4.0 && <0.5
+    , microlens-mtl >=0.1.1 && <0.2
+    , microlens-th >=0.4.2 && <0.5
+    , mtl >=2.2.2 && <2.3
+    , protolude >=0.2 && <0.3
+    , scotty >=0.11.5 && <0.12
+    , text >=1.2.3 && <1.3
   default-language: Haskell2010
 
 executable projects-hs-exe
@@ -42,10 +54,22 @@ executable projects-hs-exe
       Paths_projects_hs
   hs-source-dirs:
       app
+  default-extensions: NoImplicitPrelude OverloadedStrings
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson >=1.4.6 && <1.4.7
+    , base >=4.7 && <5
+    , bytestring >=0.10.8.2 && <0.11
+    , hedis >=0.12 && <0.13
+    , http-types >=0.12.3 && <0.13
+    , microlens >=0.4.0 && <0.5
+    , microlens-mtl >=0.1.1 && <0.2
+    , microlens-th >=0.4.2 && <0.5
+    , mtl >=2.2.2 && <2.3
     , projects-hs
+    , protolude >=0.2 && <0.3
+    , scotty >=0.11.5 && <0.12
+    , text >=1.2.3 && <1.3
   default-language: Haskell2010
 
 test-suite projects-hs-test
@@ -55,8 +79,20 @@ test-suite projects-hs-test
       Paths_projects_hs
   hs-source-dirs:
       test
+  default-extensions: NoImplicitPrelude OverloadedStrings
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson >=1.4.6 && <1.4.7
+    , base >=4.7 && <5
+    , bytestring >=0.10.8.2 && <0.11
+    , hedis >=0.12 && <0.13
+    , http-types >=0.12.3 && <0.13
+    , microlens >=0.4.0 && <0.5
+    , microlens-mtl >=0.1.1 && <0.2
+    , microlens-th >=0.4.2 && <0.5
+    , mtl >=2.2.2 && <2.3
     , projects-hs
+    , protolude >=0.2 && <0.3
+    , scotty >=0.11.5 && <0.12
+    , text >=1.2.3 && <1.3
   default-language: Haskell2010
